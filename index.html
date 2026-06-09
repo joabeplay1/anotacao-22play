@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anotações - Jesus Reina AI Engine</title>
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for cyberpunk neon glassmorphism */
+        body {
+            font-family: 'Inter', sans-serif; /* Using a common modern font, could link Google Fonts */
+        }
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(192, 132, 252, 0.7), 0 0 10px rgba(192, 132, 252, 0.5);
+        }
+        .glassmorphism {
+            background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+            backdrop-filter: blur(10px); /* Blur effect */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+        }
+        /* Custom scrollbar for a touch of cyberpunk */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e; /* Dark background */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8e44ad; /* Purple */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6c3483; /* Darker purple on hover */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-950 via-purple-950 to-black min-h-screen flex flex-col text-gray-100 p-4">
+
+    <!-- Main Application Container -->
+    <div class="container mx-auto max-w-4xl flex-grow flex flex-col">
+
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-5xl font-extrabold text-purple-400 neon-glow drop-shadow-lg tracking-wide">
+                <span class="block sm:inline">anotaçõas</span>
+            </h1>
+            <p class="text-gray-400 text-sm mt-2">Seu HUB para pensamentos digitais</p>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- New Note Section -->
+            <section class="glassmorphism rounded-xl p-6 shadow-lg flex flex-col border-purple-800 border-opacity-50 transition-all duration-300 hover:border-purple-600">
+                <h2 class="text-3xl font-bold text-cyan-400 mb-6 neon-glow">Nova Anotação</h2>
+                <div class="flex flex-col flex-grow space-y-4">
+                    <input
+                        type="text"
+                        placeholder="Título da anotação (opcional)"
+                        class="w-full bg-gray-800/50 border border-purple-700 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 rounded-lg py-3 px-4 text-white placeholder-gray-400 outline-none transition-all duration-200"
+                    >
+                    <textarea
+                        placeholder="Comece a escrever sua anotação aqui..."
+                        rows="8"
+                        class="w-full flex-grow bg-gray-800/50 border border-purple-700 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 rounded-lg py-3 px-4 text-white placeholder-gray-400 resize-y outline-none transition-all duration-200"
+                    ></textarea>
+                    <button class="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                        <span>Adicionar Anotação</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Existing Notes Section -->
+            <section class="glassmorphism rounded-xl p-6 shadow-lg flex flex-col border-cyan-800 border-opacity-50 transition-all duration-300 hover:border-cyan-600">
+                <h2 class="text-3xl font-bold text-purple-400 mb-6 neon-glow">Minhas Anotações</h2>
+                <div class="flex-grow overflow-y-auto space-y-4 pr-2"> <!-- Added pr-2 for scrollbar visual -->
+                    <!-- Example Note 1 -->
+                    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-4 transition-all duration-300 hover:bg-gray-700/40 hover:border-purple-600 shadow-md">
+                        <h3 class="text-xl font-semibold text-purple-300 mb-2">Ideias para o Projeto "Neon City"</h3>
+                        <p class="text-gray-300 text-sm">
+                            Explorar paletas de cores mais vibrantes, incorporar mais elementos de "glitch art" e desenvolver uma trilha sonora synthwave.
+                            Considerar o uso de fontes pixeladas para títulos e um estilo mais limpo para o corpo do texto.
+                        </p>
+                        <div class="flex justify-end space-x-2 mt-4">
+                            <button class="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                            </button>
+                            <button class="text-gray-400 hover:text-red-500 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Example Note 2 -->
+                    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-4 transition-all duration-300 hover:bg-gray-700/40 hover:border-cyan-600 shadow-md">
+                        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Lista de Compras Cibernéticas</h3>
+                        <p class="text-gray-300 text-sm">
+                            - Leite de soja sintético <br>
+                            - Chips de memória neural (gen 7) <br>
+                            - Cabo de fibra óptica de alta velocidade <br>
+                            - Pilhas de plasma para o drone de estimação
+                        </p>
+                        <div class="flex justify-end space-x-2 mt-4">
+                            <button class="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                            </button>
+                            <button class="text-gray-400 hover:text-red-500 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Example Note 3 -->
+                    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-4 transition-all duration-300 hover:bg-gray-700/40 hover:border-purple-600 shadow-md">
+                        <h3 class="text-xl font-semibold text-purple-300 mb-2">Lembretes Urgentes</h3>
+                        <p class="text-gray-300 text-sm">
+                            - Atualizar firmware do implante ocular <br>
+                            - Pagar assinatura do serviço de rede neural <br>
+                            - Enviar relatório de progresso para o chefe-IA até 23:59 GMT+3
+                        </p>
+                        <div class="flex justify-end space-x-2 mt-4">
+                            <button class="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                            </button>
+                            <button class="text-gray-400 hover:text-red-500 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-8 text-gray-500 text-xs">
+            &copy; 2026 Jesus Reina AI Engine. Todos os direitos reservados.
+        </footer>
+    </div>
+
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+        // A funcionalidade de adicionar/editar/excluir notas exigiria JavaScript.
+        // Este é apenas o design HTML funcional conforme solicitado.
+    </script>
+</body>
+</html>
